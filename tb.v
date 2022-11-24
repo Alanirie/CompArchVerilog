@@ -11,6 +11,8 @@ Top_PC DUT(next, current, reset, clk, RD, RS1, RS2, IMM, out);
 
 initial begin
 	reset <= 1;
+	#5
+	reset <= 0;
 	for(i=0; i <= 20; i = i + 1) begin
 		clk <= 0;
 		#5
